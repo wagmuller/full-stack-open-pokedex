@@ -11,11 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
-      - uses: cypress-io/github-action@v2
-        with:
-          # Disable running of tests within install job
-          runTests: false
-          build: npm run build
       - name: npm install
         run: npm install
       - name: lint
@@ -24,4 +19,6 @@ jobs:
         run: npm run build
       - name: test
         run: npm test
+      - name: cypress
+        run: npm install cypress
 
