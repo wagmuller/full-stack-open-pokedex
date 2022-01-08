@@ -7,6 +7,6 @@ describe('Pokedex', function() {
   it('fpokemon page can be navigated to', function () {
     cy.visit('http://localhost:5000')
     cy.contains('ivysaur').click()
-    cy.contains('chlorophyll') 
+    cy.contains('chlorophyll')
   })
 })
