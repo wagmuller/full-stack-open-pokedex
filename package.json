@@ -9,11 +9,15 @@
     "test": "jest",
     "eslint": "eslint './**/*.{js,jsx}'",
     "build": "webpack --mode production",
-    "cypress-open": "cypress open"
+    "cypress-open": "cypress open",
+    "test:e2e": "cypress run"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/smartlyio/fullstackopen-cicd.git"
+  },
+  "jest": {
+    "modulePathIgnorePatterns": ["<rootDir>/cypress/"]
   },
   "keywords": [
     "fullstack-open"
