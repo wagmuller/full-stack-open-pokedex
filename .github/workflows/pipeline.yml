@@ -47,6 +47,9 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "pokedex-deploy-the-new" 
           heroku_email: "wagner.a.muller@gmail.com"
+          healthcheck: "https://pokedex-deploy-the-new.herokuapp.com/health"
+          checkstring: "1"
+          rollbackonhealthcheckfailed: true
 
 
 
